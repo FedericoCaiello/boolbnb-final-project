@@ -34,7 +34,7 @@ $ cd boolbnb
 * Copiare il file ".env.example" in uno nuovo chiamato ".env".
 
 ```sh
-$ git clone https://github.com/ailequal/boolbnb.git
+$ cp .env.example .env
 ```
 
 * Compilare i seguenti campi del file ".env" in modo da farli combaciare con il proprio ambiente di lavoro locale. Le chiavi per abilitare Braintree sono reperibili registrandosi [qui](https://developers.braintreepayments.com/).
