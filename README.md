@@ -1,72 +1,114 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# README.md
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Descrizione
 
-## About Laravel
+"boolbnb" e' un sito web progettato da zero grazie al lavoro di [Tetyana Sergata](https://github.com/TetyanaSergata), [Stefano Riccio](https://github.com/stefanoriccio1), [Manuel Di Pilla](https://github.com/Manuel-Di-Pilla), [Elia Pari](https://github.com/ailequal) e [Federico Caiello](https://github.com/FedericoCaiello). La piattaforma si ispira al famoso portale online Airbnb, il quale mette in contatto persone in cerca di un alloggio o di una camera per brevi periodi.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Essa prevede la registrazione di utenti, l’inserimento di appartamenti con geo-localizzazione ([TomTom API](https://developer.tomtom.com/)), il supporto ad una piattaforma di pagamenti esterna ([Braintree SDK](https://developers.braintreepayments.com/)) e la visualizzazione grafica delle statistiche d’uso ([Chart.js](https://www.chartjs.org/)) usando [Laravel](https://laravel.com/) come framework PHP.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Guida
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+"boolbnb" e' basato sulla versione "[5.8.X](https://laravel.com/docs/5.8/releases#laravel-5.8)" di Laravel.
 
-## Learning Laravel
+#### Requisiti per l'installazione
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* PHP >= 7.1.3
+* Composer (per utilizzare i packages in PHP)
+* Node.js (per utilizzare i packages di npm in JavaScript)
+* MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Installazione
 
-## Laravel Sponsors
+* Clonare la repository da GitHub con il seguente comando da terminale.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```sh
+$ git clone https://github.com/ailequal/boolbnb.git
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+* Navigare all'interno della cartella.
 
-## Contributing
+```sh
+$ cd boolbnb
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Copiare il file ".env.example" in uno nuovo chiamato ".env".
 
-## Security Vulnerabilities
+```sh
+$ git clone https://github.com/ailequal/boolbnb.git
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Compilare i seguenti campi del file ".env" in modo da farli combaciare con il proprio ambiente di lavoro locale. Le chiavi per abilitare Braintree sono reperibili registrandosi [qui](https://developers.braintreepayments.com/).
 
-## License
+```sh
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD= 
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+BRAINTREE_ENV=sandbox
+BRAINTREE_MERCHANT_ID=
+BRAINTREE_PUBLIC_KEY=
+BRAINTREE_PRIVATE_KEY=
+```
+
+* Copiare il contenuto dell'archivio zip "images.zip" (compresa la cartella che contiene i file) all'interno del seguente percorso:
+
+
+```sh
+boolbnb/storage/app/public/
+```
+
+* Ora digitare tutti i seguenti comandi da terminale, uno dopo l'altro.
+
+```sh
+$ composer install
+
+$ php artisan key:generate
+
+$ composer dump-autoload
+
+$ php artisan storage:link
+
+$ php artisan migrate
+
+$ php artisan db:seed
+
+$ npm install
+
+$ npm run dev
+
+$ php artisan serve
+```
+
+* "boolbnb" sara' ora accessibile in locale dal seguente indirizzo: "[127.0.0.1:8000](http://127.0.0.1:8000)".
+
+#### Errori
+
+* Se si ricevono degli errori legati a Braintree, provare a digitare il seguente comando:
+
+```sh
+$ php artisan config:clear
+```
+
+### Struttura database con i seeder iniettati
+
+#### Utenti
+
+* Pippo con 4 appartamenti a Roma
+* Paperino con 6 appartamenti a Napoli
+* Paperina con 5 appartamenti a Rimini
+* Topolino con 4 appartamenti a Milano
+* Minnie con 1 appartamento a Cesena
+
+Ogni utente ha la sua email composta da "**utente@gmail.com**". Quindi nel caso di Pippo avremo "pippo@gmail.com". La password dei seguenti 5 account e' "**password**".
+
+#### Appartamenti
+
+* Tutti gli appartamenti hanno gia' delle informazioni "realistiche".
+* Tutti gli appartamenti hanno ognuno la propia foto personalizzata.
+* I servizi extra sono generati casualmente dai seeder per ogni appartamento.
+* I primi quattro utenti hanno tutti un singolo appartamento con la promozione gia' attivata. Quindi tutti tranne Minnie.
+* Tutti gli appartamenti hanno gia' statistiche di visite e messaggi pronte da essere visualizzate, tutte diverse tra loro.
+
