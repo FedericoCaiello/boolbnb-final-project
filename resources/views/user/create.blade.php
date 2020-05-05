@@ -143,7 +143,7 @@
         <div class="row">
             <div class= "col-lg-6 col-md-12">
                 <div class= "bottom-box hide-flat">
-                    <h2>Puoi rendere visibile il tuo appartamento in un secondo momento</h2>
+                    <h2>Vuoi rendere visibile il tuo appartamento in un secondo momento?</h2>
                         <div class="radius-container">
                             <div class="radius">
                                 <span>Yes</span>

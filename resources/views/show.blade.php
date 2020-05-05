@@ -41,12 +41,9 @@
       <span>{{$promos[0]->price}}€ - 24 ore</span>
       <input type="radio" name="price" class="ciao" id="{{$promos[0]->id}}" value="{{$promos[0]->price}}">
 
-
-
       <span>{{$promos[1]->type}}</span>
       <span>{{$promos[1]->price}}€ per - 72 ore</span>
       <input type="radio" name="price" class="ciao" id="{{$promos[1]->id}}" value="{{$promos[1]->price}}">
-
 
       <span>{{$promos[2]->type}}</span>
       <span>{{$promos[2]->price}}€ per - 144 ore</span>
@@ -93,12 +90,9 @@
             <span>{{$promos[0]->price}}€ - 24 ore</span>
             <input type="radio" name="price" class="ciao" id="{{$promos[0]->id}}" value="{{$promos[0]->price}}">
       
-      
-      
             <span>{{$promos[1]->type}}</span>
             <span>{{$promos[1]->price}}€ per - 72 ore</span>
             <input type="radio" name="price" class="ciao" id="{{$promos[1]->id}}" value="{{$promos[1]->price}}">
-      
       
             <span>{{$promos[2]->type}}</span>
             <span>{{$promos[2]->price}}€ per - 144 ore</span>
@@ -200,7 +194,7 @@
           </span>
         </div>
         <input type="hidden" name="id" value="{{$flats->id}}">
-        <input class='submit' type="submit" value="Submit">
+        <input class='submit' type="submit" value="Invia Messaggio">
       </form>
     </div>
   </div>
